@@ -1,0 +1,30 @@
+def info(stud_name, prelims_grade, midterm_grade, finals_grade):
+
+    final_average = (float(prelims_grade) + float(midterm_grade) + float(finals_grade))/3
+    final_averages = round(final_average, 2)
+
+    Happy = ('\U0001F600:>')
+    Laugh = ('\U0001F606:/')
+    Sad = ("\U0001F62D :<")
+
+    if final_average > 70:
+        result = Happy
+    elif final_average == 70:
+        result = Laugh
+    else:
+        result = Sad
+
+    print(("Name: " + stud_name) +
+        ("\nPrelim Grade: " + prelims_grade) +
+        ("\nMidterm Grade: " + midterm_grade) +
+        ("\nFinal Grade: " + finals_grade) +
+        ("\nFinal Average Grade: " + str(final_averages)) +
+        ("\nResult: "+ result)+
+          (('\n')))
+
+print('---------------------------------------------------------')
+info(input(" What is your name: "),
+   input(" Please input your Prelim grade: "),
+   input(" Please input your Midterm grade: "),
+   input(" Please input your Finals grade: "),
+     )
